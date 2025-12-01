@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XYZ Junior College Vijayawada</title>
+  <link rel="stylesheet" href="styles2.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar">
+    <div class="logo">XYZ College</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#whyus">Why Us</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Best Junior College in Vijayawada</h1>
+      <p class="hero-subtitle">Shaping Futures with Excellence in MPC, BiPC, CEC & MEC</p>
+      <button class="cta-btn" onclick="scrollToContact()">📞 Contact Us</button>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>XYZ Junior College offers high-quality intermediate education with experienced faculty, excellent results, and a safe learning environment. We are committed to nurturing excellence in academics and character development for every student.</p>
+  </section>
+
+  <!-- ========== COURSES SECTION ========== -->
+  <section id="courses" class="section dark">
+    <h2>Courses Offered</h2>
+    <div class="courses-grid">
+
+      <!-- MPC Course Card -->
+      <div class="course-card" data-desc="MPC students excel in Maths, Physics, and Chemistry with expert guidance. They achieve top ranks and strong foundation for engineering. Our MPC program focuses on conceptual clarity and problem-solving skills.">
+        <h3>MPC</h3>
+        <p class="course-desc"></p>
+      </div>
+
+      <!-- BiPC Course Card -->
+      <div class="course-card" data-desc="BiPC students thrive in Biology, Physics, and Chemistry with hands-on experiments and personalized mentorship. Perfect for NEET aspirants and medical professionals.">
+        <h3>BiPC</h3>
+        <p class="course-desc"></p>
+      </div>
+
+      <!-- CEC Course Card -->
+      <div class="course-card" data-desc="CEC students get an in-depth understanding of Civics, Economics, and Commerce, preparing them for real-world success. Ideal for civil service and management careers.">
+        <h3>CEC</h3>
+        <p class="course-desc"></p>
+      </div>
+
+      <!-- MEC Course Card -->
+      <div class="course-card" data-desc="MEC students combine Maths, Economics, and Commerce for a strong academic and career path in business and finance. Gateway to MBA and CA courses.">
+        <h3>MEC</h3>
+        <p class="course-desc"></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== WHY US SECTION ========== -->
+  <section id="whyus" class="section">
+    <h2>Why Choose Us?</h2>
+    <div class="features-grid">
+
+      <!-- Feature 1: Faculty -->
+      <div class="feature-card" data-desc="Our experienced faculty nurtures each student with care, guiding them to excel academically and personally.">
+        <div class="card-title">👨‍🏫 Experienced Faculty</div>
+        <p class="feature-desc"></p>
+      </div>
+
+      <!-- Feature 2: Results -->
+      <div class="feature-card" data-desc="We consistently deliver top-ranked results, making parents proud and students confident in their future.">
+        <div class="card-title">🏆 Top-Ranked Results</div>
+        <p class="feature-desc"></p>
+      </div>
+
+      <!-- Feature 3: Campus Safety -->
+      <div class="feature-card" data-desc="Our campus is safe and secure, ensuring students learn in a comfortable, stress-free environment.">
+        <div class="card-title">🔒 Safe & Secure Campus</div>
+        <p class="feature-desc"></p>
+      </div>
+
+      <!-- Feature 4: Hostel -->
+      <div class="feature-card" data-desc="Hostel facilities provide a home-like environment, fostering independence and friendship.">
+        <div class="card-title">🏠 Hostel Facility</div>
+        <p class="feature-desc"></p>
+      </div>
+
+      <!-- Feature 5: Coaching -->
+      <div class="feature-card" data-desc="Integrated IIT/NEET coaching helps students achieve their dream careers with strong academic support.">
+        <div class="card-title">🎓 IIT/NEET Coaching</div>
+        <p class="feature-desc"></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS SECTION ========== -->
+  <section id="testimonials" class="section dark">
+    <h2>Parent Testimonials</h2>
+    <div class="parent-resources">
+
+      <!-- Testimonial 1 -->
+      <div class="resource-card">
+        <h4>👩 Mrs. Lakshmi</h4>
+        <p>"My daughter became more confident after joining this college. The faculty is supportive and the curriculum is well-structured."</p>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="resource-card">
+        <h4>👨 Mr. Ramesh</h4>
+        <p>"Excellent faculty and very good academic environment. The college truly cares about student development."</p>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="resource-card">
+        <h4>👩 Mrs. Anitha</h4>
+        <p>"Safe campus and very supportive teachers. The infrastructure and learning environment are outstanding."</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section id="contact" class="section dark">
+    <h2>Contact Us</h2>
+    <p>Benz Circle, Vijayawada</p>
+
+    <!-- Tab Buttons -->
+    <div class="contact-tabs">
+      <button class="tab-btn active" onclick="openTab(event, 'parent-help')">📚 Parent Resources</button>
+      <button class="tab-btn" onclick="openTab(event, 'admissions')">🎓 Admissions Info</button>
+      <button class="tab-btn" onclick="openTab(event, 'location')">📍 Location</button>
+    </div>
+
+    <!-- ========== TAB 1: PARENT RESOURCES ========== -->
+    <div id="parent-help" class="tab-content active">
+      <h3 style="color: #fff; margin-bottom: 30px;">How We Support Parents</h3>
+      <div class="parent-resources">
+
+        <div class="resource-card">
+          <h4>📞 Regular Updates</h4>
+          <p>Weekly progress reports and parent-teacher meetings to keep you informed about your child's academic journey.</p>
+        </div>
+
+        <div class="resource-card">
+          <h4>💡 Academic Counseling</h4>
+          <p>Expert guidance on course selection and career planning to help your child make the right choices.</p>
+        </div>
+
+        <div class="resource-card">
+          <h4>🎯 Performance Tracking</h4>
+          <p>Comprehensive assessment and feedback to monitor student progress and identify areas for improvement.</p>
+        </div>
+
+        <div class="resource-card">
+          <h4>🤝 Parent Workshops</h4>
+          <p>Seminars on parenting, stress management, and student wellness conducted by expert professionals.</p>
+        </div>
+
+        <div class="resource-card">
+          <h4>📱 24/7 Support Line</h4>
+          <p>Dedicated helpline for parents to reach out with any concerns or questions about their child's education.</p>
+        </div>
+
+        <div class="resource-card">
+          <h4>🏅 Scholarship Programs</h4>
+          <p>Merit-based and need-based scholarships to make quality education accessible to all deserving students.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ========== TAB 2: ADMISSIONS INFO ========== -->
+    <div id="admissions" class="tab-content">
+      <h3 style="color: #fff; margin-bottom: 30px;">Admission Information</h3>
+      <div class="parent-resources">
+
+        <div class="resource-card">
+          <h4>✅ Eligibility Criteria</h4>
+          <p>Candidates who have passed SSC (10th std) with required percentage are eligible for admission to intermediate courses.</p>
+        </div>
+
+        <div class="resource-card">
+          <h4>📋 Required Documents</h4>
+          <p>SSC certificate, Transfer certificate, Aadhar card, Birth certificate, and passport-size photographs.</p>
+        </div>
+
+        <div class="resource-card">
+          <h4>🗓️ Admission Timeline</h4>
+          <p>Applications are accepted from June to August. Merit-based selection followed by counseling process.</p>
+        </div>
+
+        <div class="resource-card">
+          <h4>💰 Fee Structure</h4>
+          <p>Affordable fee structure with flexible payment options and scholarship programs for deserving students.</p>
+        </div>
+
+        <div class="resource-card">
+          <h4>🏠 Hostel Admission</h4>
+          <p>Separate hostel facilities for boys and girls with modern amenities and 24/7 security supervision.</p>
+        </div>
+
+        <div class="resource-card">
+          <h4>🎒 Course Selection Guide</h4>
+          <p>Expert counseling to help students choose the right course based on their abilities and career aspirations.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ========== TAB 3: LOCATION ========== -->
+    <div id="location" class="tab-content">
+      <h3 style="color: #fff; margin-bottom: 30px;">Our Location</h3>
+      <p style="color: #ddd; margin-bottom: 20px;">XYZ Junior College, Benz Circle, Vijayawada - 520010</p>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3817.7698849584!2d83.32087!3d16.50664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35f0f1f1f1f1f1%3A0x0!2sVijayawada!5e0!3m2!1sen!2sin!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+    <!-- ========== QUICK ACTION BUTTONS ========== -->
+    <div class="quick-actions">
+      <a href="tel:+919999999999" class="action-btn action-btn-primary">📞 Call Now</a>
+      <a href="https://wa.me/919999999999" class="action-btn action-btn-whatsapp">💬 WhatsApp Us</a>
+      <a href="mailto:info@xyzcollegevijayawada.com" class="action-btn action-btn-email">✉️ Email Us</a>
+    </div>
+  </section>
+
+  <!-- ========== JAVASCRIPT FILE ========== -->
+  <script src="script2.js"></script>
+
+</body>
+</html>
