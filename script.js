@@ -163,3 +163,18 @@ const aboutSwiper = new Swiper('.about-slider', {
   },
   speed: 700,
 });
+
+const iframe = document.getElementById("ytVideo");
+  const player = new YT.Player(iframe);
+
+  const observerYT = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        player.playVideo();
+      } else {
+        player.pauseVideo();
+      }
+    });
+  }, { threshold: 0.5 });
+
+  observerYT.observe(iframe);

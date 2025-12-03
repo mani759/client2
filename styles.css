@@ -869,3 +869,34 @@ section { opacity: 0; transform: translateY(50px); }
     height: 230px;   /* a bit shorter on small screens */
   }
 }
+
+
+#campus-video {
+  text-align: center;
+  padding: 60px 20px;
+  background: #111;
+  color: white;
+}
+
+.video-heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  display: inline-block;
+  border-bottom: 3px solid dodgerblue;
+  padding-bottom: 4px;
+}
+
+.video-container {
+  max-width: 900px;
+  margin: auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 15px;
+}
