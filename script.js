@@ -164,17 +164,37 @@ const aboutSwiper = new Swiper('.about-slider', {
   speed: 700,
 });
 
-const iframe = document.getElementById("ytVideo");
-  const player = new YT.Player(iframe);
+ document.addEventListener("DOMContentLoaded", function () {
 
-  const observerYT = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        player.playVideo();
-      } else {
-        player.pauseVideo();
-      }
-    });
-  }, { threshold: 0.5 });
+    const video = document.getElementById("campusVideo");
+    if (!video) return;
 
-  observerYT.observe(iframe);
+    // Intersection Observer
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+
+                // Try to play
+                video.play().then(() => {
+                    // Try unmute automatically
+                    video.muted = false;
+                }).catch(() => {
+                    console.log("Browser blocked sound autoplay.");
+                });
+
+            } else {
+                video.pause();
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(video);
+
+    // Fallback: first tap enables sound if blocked
+    document.addEventListener("click", () => {
+        if (video.muted) {
+            video.muted = false;
+        }
+        video.play();
+    }, { once: true });
+});

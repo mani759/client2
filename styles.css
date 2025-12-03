@@ -871,32 +871,22 @@ section { opacity: 0; transform: translateY(50px); }
 }
 
 
-#campus-video {
-  text-align: center;
-  padding: 60px 20px;
-  background: #111;
-  color: white;
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.video-heading {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  display: inline-block;
-  border-bottom: 3px solid dodgerblue;
-  padding-bottom: 4px;
+.video-wrapper {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 16px;
 }
 
-.video-container {
-  max-width: 900px;
-  margin: auto;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
-}
-
-video {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 15px;
+.video-wrapper video {
+    width: 100%;
+    height: auto;
+    display: block;
 }
